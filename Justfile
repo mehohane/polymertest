@@ -90,6 +90,13 @@ clean:
 
 # Fully clean the environment by removing the artifacts, the dependencies, and cache folders and running the forge clean-all command
 # Usage: just clean-all
+run-challenge-4:
+    echo "Running the challenge 4 flow..."
+    just deploy base base
+    just sanity-check
+    just send-packet optimism
+    echo "Thank you for participating in Challenge!"
+    echo "Submit your evidence in the #proof channel in our Discord Server!"
 clean-all:
     echo "Cleaning up environment..."
     rm -rf artifacts cache
